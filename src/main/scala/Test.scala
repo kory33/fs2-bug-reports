@@ -1,14 +1,11 @@
-package io.github.kory33.bugreports.fs2.io.net
-
 object Test {
   @main def main: Unit = {
     import cats.Monad
+    import cats.effect.unsafe.implicits.global
     import cats.effect.{IO, Resource, Spawn}
+    import cats.implicits.given
     import com.comcast.ip4s.SocketAddress
     import fs2.io.net.Network
-
-    import cats.implicits.given
-    import cats.effect.unsafe.implicits.global
 
     val portNumber = 31629
     val serverAddress = SocketAddress.fromString(s"localhost:$portNumber").get
