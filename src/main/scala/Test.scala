@@ -27,8 +27,8 @@ object Test {
     val program: IO[Unit] =
       clientResource.use { client =>
         Monad[IO].foreverM {
-          client.read(1024).start.flatMap { fiber =>
-            fiber.cancel >> client.read(1024) >> fiber.join
+          client.read(10).start.flatMap { fiber =>
+            fiber.cancel >> client.read(10) >> fiber.join
           }
         }
       }.void
