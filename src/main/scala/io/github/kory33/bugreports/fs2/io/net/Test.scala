@@ -1,6 +1,6 @@
 package io.github.kory33.bugreports.fs2.io.net
 
-object SocketImplTest {
+object Test {
   @main def main: Unit = {
     import cats.Monad
     import cats.effect.{IO, Resource, Spawn}
