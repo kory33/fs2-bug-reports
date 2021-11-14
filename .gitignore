@@ -1,0 +1,13 @@
+target
+project/target
+project/project/target
+
+/.bsp
+/.bloop
+/.metals
+/project/.bloop
+/project/project/.bloop
+/project/**/metals.sbt
+**.semanticdb
+
+/.vscode
